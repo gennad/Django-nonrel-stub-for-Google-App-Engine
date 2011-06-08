@@ -1,4 +1,4 @@
-application: gennad-zlobin
+application: pysnippets
 version: 1
 runtime: python
 api_version: 1
