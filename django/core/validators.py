@@ -183,7 +183,8 @@ class MinLengthValidator(BaseValidator):
     code = 'min_length'
 
 class MaxLengthValidator(BaseValidator):
-    compare = lambda self, a, b: a > b
+    #compare = lambda self, a, b: a > b
+    compare = lambda self, a, b: False if b is None else a > b
     clean   = lambda self, x: len(x)
     message = _(u'Ensure this value has at most %(limit_value)d characters (it has %(show_value)d).')
     code = 'max_length'

@@ -224,6 +224,7 @@ def lazy(func, *resultclasses):
             if self._delegate_str:
                 return str(self) % rhs
             elif self._delegate_unicode:
+                from utils import pdb; pdb()
                 return unicode(self) % rhs
             else:
                 raise AssertionError('__mod__ not supported for non-string types')

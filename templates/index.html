@@ -1,0 +1,11 @@
+{{message}}
+<form method="POST" action="/">
+{{form.as_p}}
+<input type="submit" value="OK" />
+</form>
+{{ form.errors }}
+{{ form.non_field_errors }}
+
+{%for snippet in snippets%}
+{{snippet.title}}
+{%endfor%}
